@@ -54,41 +54,41 @@ $app->post('/webhook', function($request, $response) use ($bot, $pass_signature)
     }
 
     // app code goes here !
-    // $data = json_decode($body, true);
-    // if (is_array($data['events'])){
-    //     foreach ($data['events'] as $event){
-    //         if ($event['type'] == 'message'){
-    //             if ($event['message']['type'] == 'text'){
+    $data = json_decode($body, true);
+    if (is_array($data['events'])){
+        foreach ($data['events'] as $event){
+            if ($event['type'] == 'message'){
+                if ($event['message']['type'] == 'text'){
 
-    //                 // reply with replyText()
-    //                 // $result = $bot->replyText($event['replyToken'], $event['message']['text']);
+                    // reply with replyText()
+                    // $result = $bot->replyText($event['replyToken'], $event['message']['text']);
 
-    //                 // reply with replyMessage()
-    //                 $textMessageBuilder = new TextMessageBuilder("Tebak Kode");
-    //                 $result = $bot->replyMessage($event['replyToken'], $textMessageBuilder);
+                    // reply with replyMessage()
+                    $textMessageBuilder = new TextMessageBuilder("Tebak Kode");
+                    $result = $bot->replyMessage($event['replyToken'], $textMessageBuilder);
 
-    //                 // reply with sticker stickerMessageBuilder()
-    //                 // $packageId = 1; $stickerId = 13;
-    //                 // $stickerMessageBuilder = new StickerMessageBuilder($packageId, $stickerId);
-    //                 // $result = $bot->replyMessage($event['replyToken'], $stickerMessageBuilder);
+                    // reply with sticker stickerMessageBuilder()
+                    // $packageId = 1; $stickerId = 13;
+                    // $stickerMessageBuilder = new StickerMessageBuilder($packageId, $stickerId);
+                    // $result = $bot->replyMessage($event['replyToken'], $stickerMessageBuilder);
 
-    //                 // reply with MultiMessageBuilder()
-    //                 // $textMessageBuilder1 = new TextMessageBuilder('Tebak Kode');
-    //                 // $textMessageBuilder2 = new TextMessageBuilder('Line Chatbot by RSDH');
-    //                 // $stickerMessageBuilder = new StickerMessageBuilder(1, 106);
+                    // reply with MultiMessageBuilder()
+                    // $textMessageBuilder1 = new TextMessageBuilder('Tebak Kode');
+                    // $textMessageBuilder2 = new TextMessageBuilder('Line Chatbot by RSDH');
+                    // $stickerMessageBuilder = new StickerMessageBuilder(1, 106);
 
-    //                 // $multiMessageBuilder = new MultiMessageBuilder();
-    //                 // $multiMessageBuilder->add($textMessageBuilder1);
-    //                 // $multiMessageBuilder->add($textMessageBuilder2);
-    //                 // $multiMessageBuilder->add($stickerMessageBuilder);
+                    // $multiMessageBuilder = new MultiMessageBuilder();
+                    // $multiMessageBuilder->add($textMessageBuilder1);
+                    // $multiMessageBuilder->add($textMessageBuilder2);
+                    // $multiMessageBuilder->add($stickerMessageBuilder);
 
-    //                 // $result = $bot->replyMessage($event['replyToken'], $multiMessageBuilder);
+                    // $result = $bot->replyMessage($event['replyToken'], $multiMessageBuilder);
 
-    //                 return $response->withJson($result->getJSONDecodeedBody(), $result->getHTTPStatus());
-    //             }
-    //         }
-    //     }
-    // }
+                    return $response->withJson($result->getJSONDecodeedBody(), $result->getHTTPStatus());
+                }
+            }
+        }
+    }
 
 });
 
