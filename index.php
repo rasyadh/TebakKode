@@ -9,7 +9,7 @@ use \LINE\LINEBot\MessageBuilder\StickerMessageBuilder;
 use \LINE\LINEBot\SignatureValidator as SignatureValidator;
 
 // set false for production
-$pass_signature = false;
+$pass_signature = true;
 
 // set LINE channel_access_token and channel_secret
 $channel_access_token = "K3hx9TtNdEygQpIK+T3BEOEOdhaCGdMcMhy/PTOsm4Yqoct/z5/yk7ouM+8FDM/63LD3qJuOcoZ7M1oT9nwUFZpDRRTcuDPNDadEhAeZmueFTuj+3fmqoUoyxUs2VpF3WCKJ07tHzawp4btj9SKUigdB04t89/1O/w1cDnyilFU=";
