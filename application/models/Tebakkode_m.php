@@ -18,17 +18,54 @@ class Tebakkode_m extends CI_Model {
   }
 
   // Users
-  function getUser($userId){}
+  function getUser($userId){
+    $data = $this->db->where('user_id', $userId)->get('users')->row_array();
+    if(count($data) > 0) return $data;
+    return false;
+  }
 
-  function saveUser($profile){}
+  function saveUser($profile){
+    $this->db->set('user_id', $profile['userId'])
+      ->set('display_name', $profile['displayName'])
+      ->insert('users');
+
+    return $this->db->insert_id();
+  }
 
   // Question
-  function getQuestion($questionNum){}
+  function getQuestion($questionNum){
+    $data = $this->db->where('number', $questionNum)
+      ->get('questions')
+      ->row_array();
 
-  function isAnswerEqual($number, $answer){}
+    if(count($data)>0) return $data;
+    return false;
+  }
 
-  function setUserProgress($user_id, $newNumber){}
+  function isAnswerEqual($number, $answer){
+    $this->db->where('number', $number)
+      ->where('answer', $answer);
 
-  function setScore($user_id, $score){}
+    if(count($this->db->get('questions')->row()) > 0)
+      return true;
+
+    return false;
+  }
+
+  function setUserProgress($user_id, $newNumber){
+    $this->db->set('number', $newNumber)
+      ->where('user_id', $user_id)
+      ->update('users');
+
+    return $this->db->affected_rows();
+  }
+
+  function setScore($user_id, $score){
+    $this->db->set('score', $score)
+      ->where('user_id', $user_id)
+      ->update('users');
+
+    return $this->db->affected_rows();
+  }
 
 }
