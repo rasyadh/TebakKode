@@ -1,0 +1,109 @@
+[
+    {
+        "name": "vlucas/phpdotenv",
+        "version": "v2.4.0",
+        "version_normalized": "2.4.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/vlucas/phpdotenv.git",
+            "reference": "3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c",
+            "reference": "3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.9"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^4.8 || ^5.0"
+        },
+        "time": "2016-09-01T10:05:43+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.4-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Dotenv\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause-Attribution"
+        ],
+        "authors": [
+            {
+                "name": "Vance Lucas",
+                "email": "vance@vancelucas.com",
+                "homepage": "http://www.vancelucas.com"
+            }
+        ],
+        "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
+        "keywords": [
+            "dotenv",
+            "env",
+            "environment"
+        ]
+    },
+    {
+        "name": "linecorp/line-bot-sdk",
+        "version": "1.6.0",
+        "version_normalized": "1.6.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/line/line-bot-sdk-php.git",
+            "reference": "d827436f59d0081ce4e1e49ede4861648f8a0bca"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/line/line-bot-sdk-php/zipball/d827436f59d0081ce4e1e49ede4861648f8a0bca",
+            "reference": "d827436f59d0081ce4e1e49ede4861648f8a0bca",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4"
+        },
+        "require-dev": {
+            "apigen/apigen": "~4.1",
+            "indigophp/hash-compat": "~1.1.0",
+            "phpmd/phpmd": "~2.4",
+            "phpunit/phpunit": "^4.8.24",
+            "squizlabs/php_codesniffer": "~2.6"
+        },
+        "time": "2017-04-27T05:32:19+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "LINE\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache License Version 2.0"
+        ],
+        "authors": [
+            {
+                "name": "moznion",
+                "email": "moznion@gmail.com"
+            },
+            {
+                "name": "Satoru Yoshihara",
+                "email": "vaduz0@gmail.com"
+            }
+        ],
+        "description": "SDK of the LINE BOT API for PHP",
+        "homepage": "https://github.com/line/line-bot-sdk-php",
+        "keywords": [
+            "bot",
+            "line",
+            "sdk"
+        ]
+    }
+]

@@ -1,16 +1,10 @@
 {
-    "name": "rasyadh/tebak-kode",
-    "description": "Simple line bot using php slim framework",
-    "type": "project",
-    "require": {
-        "php": "^5.6",
-        "slim/slim": "^3.8",
-        "linecorp/line-bot-sdk": "^2.2"
-    },
-    "authors": [
-        {
-            "name": "Rasyadh Abdul Aziz",
-            "email": "rasyadhabdulaziz@gmail.com"
-        }
-    ]
+	"config": {
+		"vendor-dir": "lib/vendor"
+	},
+	"require": {
+		"php": ">=5.6",
+		"linecorp/line-bot-sdk": "^1.4",
+		"vlucas/phpdotenv": "^2.4"
+	}
 }
